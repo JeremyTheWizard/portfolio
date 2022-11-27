@@ -7,8 +7,8 @@ export const About: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-md">
         <div className="relative min-h-[500px]">
           <Image
-            src="/About.jpg"
-            alt="Mijail Piekarz"
+            src="/About.png"
+            alt="Jeremy Piekarz"
             layout="fill"
             objectFit="contain"
           />
@@ -17,8 +17,8 @@ export const About: React.FC = () => {
           <p>
             Hi there!
             <br />
-            <br /> I'm Mijail Piekarz, a professional developer with deep
-            knowledge of blockchain and web3.
+            <br /> I'm Jeremy Piekarz, a professional developer. Expert in
+            blockchain and web3.
             <br />
             <br />I focus on creating exceptional digital experiences by
             building{" "}
@@ -28,7 +28,7 @@ export const About: React.FC = () => {
             <br />
             <br />
             I'm fast and efficient. So, if you have a project that needs to be
-            done right, you've come to the right place.
+            done right, you've come to the correct place.
           </p>
 
           <div className="hidden mt-lg xl:flex xl:flex-wrap gap-lg justify-between">

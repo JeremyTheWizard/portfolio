@@ -38,7 +38,7 @@ export const Navbar = () => {
           className="w-[90vw] max-w-[1536px] mx-auto flex items-center justify-between"
         >
           <LINK href="/">
-            <a className="font-dancingScript text-display-7">MP</a>
+            <a className="font-dancingScript text-display-7">JP</a>
           </LINK>
           <div className="md:hidden">
             <MenuButton
@@ -100,6 +100,16 @@ export const Navbar = () => {
               <LINK href="#about">
                 <a onClick={() => setOpen(false)}>About</a>
               </LINK>
+            </motion.li>
+            <motion.li>
+              <a
+                href="https://github.com/mijail-piekarz"
+                target="_blank"
+                className="cursor-pointer"
+                onClick={() => {}}
+              >
+                <AiFillGithub size="2.25rem" />
+              </a>
             </motion.li>
             <motion.li variants={listItem}>
               <LINK href="#contact">
