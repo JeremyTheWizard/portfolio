@@ -23,7 +23,7 @@ export default async function handler(
       service: "gmail",
       auth: {
         user: process.env.EMAIL,
-        pass: "lyvlutbpotyalbsz",
+        pass: "oxdcjbsqsjlshfey",
       },
     });
   } catch (error) {
@@ -37,6 +37,7 @@ export default async function handler(
     subject: subject,
     text: text,
   };
+  console.log("🚀 ~ mailOptions", mailOptions);
 
   try {
     await transporter.sendMail(mailOptions);
