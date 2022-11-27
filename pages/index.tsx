@@ -9,7 +9,9 @@ import { Portfolio } from "../components/Portfolio/Portfolio";
 
 const Home: NextPage = () => {
   const [cursorText, setCursorText] = useState("");
-  const [cursorVariant, setCursorVariant] = useState<"default" | "project">("default");
+  const [cursorVariant, setCursorVariant] = useState<"default" | "project">(
+    "default"
+  );
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
@@ -58,7 +60,12 @@ const Home: NextPage = () => {
     "linear-gradient(\n  125deg,\n  hsl(0deg 0% 0%) 0%,\n  hsl(0deg 0% 0%) 10%,\n  hsl(0deg 0% 0%) 32%,\n  hsl(0deg 0% 0%) 69%,\n  hsl(0deg 0% 0%) 88%,\n  hsl(0deg 0% 0%) 100%\n)";
 
   return (
-    <div ref={ref} className={`w-[100vw] relative left-[calc(-50vw+50%)] ${!showAll && "mb-[-6rem]"}`}>
+    <div
+      ref={ref}
+      className={`w-[100vw] relative left-[calc(-50vw+50%)] ${
+        !showAll && "mb-[-6rem]"
+      }`}
+    >
       <motion.div
         className="w-[100vw] h-[100vh] overflow-hidden absolute z-[-1] flex flex-col items-center justify-center"
         animate={{ background: [gradient1, gradient2] }}
@@ -70,7 +77,7 @@ const Home: NextPage = () => {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="font-dancingScript text-display-1 text-transparent bg-clip-text bg-gradient-to-br from-black to-[#a19e9e] p-sm"
         >
-          MP
+          JP
         </motion.h1>
       </motion.div>
       <motion.div
@@ -98,8 +105,8 @@ const Home: NextPage = () => {
             transition={{ duration: 0.5, delay: 1.6 }}
             className="mt-xs text-display-9 sm:text-display-8 md:text-display-6 !font-normal"
           >
-            I'm Mijail Piekarz, a professional full-stack developer who
-            specializes in web3 and blockchain.
+            I'm Jeremy, a professional full-stack developer who specializes in
+            web3 and blockchain.
           </motion.p>
         </div>
         {showAll && (

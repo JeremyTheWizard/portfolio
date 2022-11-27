@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Mijail Piekarz</title>
-        <meta name="description" content="The portfolio of Mijail Piekarz" />
+        <title>Jeremy Piekarz</title>
+        <meta name="description" content="The portfolio of Jeremy Piekarz" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="theme-color" content="#000000" />

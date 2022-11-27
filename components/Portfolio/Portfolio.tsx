@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { AiFillGithub } from "react-icons/ai";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 
 type Props = {
   projectEnter: () => void;
@@ -13,10 +15,27 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
         <ul className="space-y-lg">
           <li>
             <div className="space-y-xs mb-md">
-              <h3>AVOBANKLESS</h3>
+              <div className="flex gap-4 items-center">
+                <h3>AVOBANKLESS</h3>
+                <BsBoxArrowUpRight
+                  onClick={() =>
+                    window.open("https://avobankless.vercel.app", "_blank")
+                  }
+                  style={{ cursor: "pointer" }}
+                />
+                <AiFillGithub
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/avobankless/avobankless",
+                      "_blank"
+                    )
+                  }
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
               <p className="">
                 Reinventing the way crypto loans work. Develop a good credit
-                score ang get access to loans with lower interest rates and less
+                score and get access to loans with lower interest rates and less
                 collateral.
               </p>
             </div>
@@ -63,7 +82,20 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
           </li>
           <li>
             <div className="space-y-xs mb-md">
-              <h3>NFT PALACE</h3>
+              <div className="space-y-xs mb-md">
+                <div className="flex gap-4 items-center">
+                  <h3>NFT PALACE</h3>
+                  <AiFillGithub
+                    onClick={() =>
+                      window.open(
+                        "https://github.com/Mijail-Piekarz/NFT-Marketplace",
+                        "_blank"
+                      )
+                    }
+                    style={{ cursor: "pointer" }}
+                  />
+                </div>
+              </div>
               <p className="">
                 Marketplace that enables the creation, sale, and purchase of
                 ERC721 tokens.
