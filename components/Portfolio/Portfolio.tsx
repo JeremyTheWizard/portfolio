@@ -82,6 +82,68 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
           </li>
           <li>
             <div className="space-y-xs mb-md">
+              <div className="flex gap-4 items-center">
+                <h3>PEACE</h3>
+                <BsBoxArrowUpRight
+                  onClick={() => window.open("https://yourpeace.io", "_blank")}
+                  style={{ cursor: "pointer" }}
+                />
+                <AiFillGithub
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/peace-cryptolegacy/frontend",
+                      "_blank"
+                    )
+                  }
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+              <p>
+                Safeguard your crypto investments and assets with Peace's
+                game-changing solutions: testaments, backup wallets, emergency
+                migration plans, and more!
+              </p>
+            </div>
+            <div onClick={() => window.open("https://yourpeace.io", "_blank")}>
+              <div
+                className="grid lg:grid-cols-2 relative justify-center gap-3 pointer-events-none lg:pointer-events-auto"
+                onMouseEnter={projectEnter}
+                onMouseLeave={projectLeave}
+              >
+                <Image
+                  src="/peace-landing-page-dark-blue.png"
+                  alt="peace landing page"
+                  width="768px"
+                  height="568px"
+                  className="cursor-none"
+                />
+                <Image
+                  src="/peace-select-protection-plan.png"
+                  alt="peace manage testament page"
+                  width="768px"
+                  height="568px"
+                />
+                <Image
+                  src="/peace-recovery-page.png"
+                  alt="peace landing page"
+                  width="768px"
+                  height="568px"
+                />
+
+                <Image
+                  src="/peace-featured-on-gradient-bg.png"
+                  alt="peace landing page"
+                  width="768px"
+                  height="568px"
+                />
+                <img />
+                <div></div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="space-y-xs mb-md">
               <div className="space-y-xs mb-md">
                 <div className="flex gap-4 items-center">
                   <h3>NFT PALACE</h3>
