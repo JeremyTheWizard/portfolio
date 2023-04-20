@@ -60,7 +60,7 @@ export const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://github.com/mijail-piekarz"
+                href="https://github.com/JeremyTheWizard"
                 target="_blank"
                 className="cursor-pointer"
                 onClick={() => {}}
@@ -103,7 +103,7 @@ export const Navbar = () => {
             </motion.li>
             <motion.li>
               <a
-                href="https://github.com/mijail-piekarz"
+                href="https://github.com/JeremyTheWizard"
                 target="_blank"
                 className="cursor-pointer"
                 onClick={() => {}}

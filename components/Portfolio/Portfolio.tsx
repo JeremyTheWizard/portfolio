@@ -150,7 +150,7 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
                   <AiFillGithub
                     onClick={() =>
                       window.open(
-                        "https://github.com/Mijail-Piekarz/NFT-Marketplace",
+                        "https://github.com/JeremyTheWizard/NFT-Marketplace",
                         "_blank"
                       )
                     }
@@ -167,7 +167,7 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
             <div
               onClick={() =>
                 window.open(
-                  "https://github.com/Mijail-Piekarz/NFT-Marketplace",
+                  "https://github.com/JeremyTheWizard/NFT-Marketplace",
                   "_blank"
                 )
               }
