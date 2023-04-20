@@ -14,14 +14,16 @@ export const Contact: React.FC = () => {
 
   useEscapeKey(handleCloseDialog);
 
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const sendEmail = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
 
     const target = e.target as typeof e.target & {
-      userName: {value: string} 
-      from: {value: string}
-      text: {value: string}
-    }
+      userName: { value: string };
+      from: { value: string };
+      text: { value: string };
+    };
 
     setLoading(true);
     try {
@@ -68,7 +70,7 @@ export const Contact: React.FC = () => {
 
   return (
     <>
-      <section id="contact" className="scroll-mt-24">
+      <section id="contact" className="scroll-mt-24 px-1">
         <h2 className="mb-lg text-center">Get In Touch!</h2>
         <form
           onSubmit={sendEmail}
@@ -126,7 +128,9 @@ export const Contact: React.FC = () => {
             >
               <AiOutlineClose size="21" />
             </span>
-            <span className="text-display-9 md:text-display-8 !mt-0">{dialogTitle}</span>
+            <span className="text-display-9 md:text-display-8 !mt-0">
+              {dialogTitle}
+            </span>
             {dialogContent}
           </div>
         </div>
