@@ -32,12 +32,12 @@ export const Navbar = () => {
   const listItem = {
     hidden: {
       opacity: 0,
-      pointerEvents: "none",
+      pointerEvents: "none" as React.CSSProperties["pointerEvents"],
       transition: { duration: 0.0115 },
     },
     show: {
       opacity: 1,
-      pointerEvents: "auto",
+      pointerEvents: "auto" as React.CSSProperties["pointerEvents"],
       transition: { duration: 0.09 },
     },
   };
