@@ -144,19 +144,17 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
 
           <li>
             <div className="space-y-xs mb-md">
-              <div className="space-y-xs mb-md">
-                <div className="flex gap-4 items-center">
-                  <h3>NFT PALACE</h3>
-                  <AiFillGithub
-                    onClick={() =>
-                      window.open(
-                        "https://github.com/Mijail-Piekarz/NFT-Marketplace",
-                        "_blank"
-                      )
-                    }
-                    style={{ cursor: "pointer" }}
-                  />
-                </div>
+              <div className="flex gap-4 items-center">
+                <h3>NFT PALACE</h3>
+                <AiFillGithub
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/JeremyTheWizard/NFT-Marketplace",
+                      "_blank"
+                    )
+                  }
+                  style={{ cursor: "pointer" }}
+                />
               </div>
               <p className="">
                 Marketplace that enables the creation, sale, and purchase of
@@ -167,7 +165,7 @@ export const Portfolio: React.FC<Props> = ({ projectEnter, projectLeave }) => {
             <div
               onClick={() =>
                 window.open(
-                  "https://github.com/Mijail-Piekarz/NFT-Marketplace",
+                  "https://github.com/JeremyTheWizard/NFT-Marketplace",
                   "_blank"
                 )
               }
