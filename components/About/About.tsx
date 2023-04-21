@@ -4,13 +4,14 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="scroll-mt-24">
       <h2 className="mb-lg text-center">About</h2>
-      <div className="grid md:grid-cols-2 gap-md">
-        <div className="relative min-h-[500px]">
+      <div className="grid [@media(min-width:939px)]:grid-cols-2 gap-md">
+        <div className="relative md:mx-auto">
           <Image
             src="/About.png"
             alt="Jeremy Piekarz"
-            layout="fill"
-            objectFit="contain"
+            width={650}
+            height={616}
+            className="object-contain hidden 2xl:block"
           />
         </div>
         <div>

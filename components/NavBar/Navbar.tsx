@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import LINK from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { MenuButton } from "./MenuButton";
 
@@ -8,19 +8,38 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const unorderedList = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0,
+      height: 0,
+      margin: 0,
+      transition: {
+        duration: 0.557,
+        delayChildren: 0.452,
+        staggerChildren: -0.113,
+      },
+    },
     show: {
       opacity: 1,
+      height: "auto",
+      margin: "auto",
       transition: {
-        delayChildren: 0.03,
-        staggerChildren: 0.08,
+        duration: 0.553,
+        staggerChildren: 0.113,
       },
     },
   };
 
   const listItem = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
+    hidden: {
+      opacity: 0,
+      pointerEvents: "none",
+      transition: { duration: 0.0115 },
+    },
+    show: {
+      opacity: 1,
+      pointerEvents: "auto",
+      transition: { duration: 0.09 },
+    },
   };
 
   const navbar = () => {
@@ -29,7 +48,11 @@ export const Navbar = () => {
         layout
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          delay: 0.5,
+        }}
         whileInView="visible"
         className="w-[100vw] h-max py-3 bg-primary fixed top-0 z-50 left-[calc(-50vw+50%)]"
       >
@@ -60,7 +83,7 @@ export const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://github.com/mijail-piekarz"
+                href="https://github.com/JeremyTheWizard"
                 target="_blank"
                 className="cursor-pointer"
                 onClick={() => {}}
@@ -77,52 +100,50 @@ export const Navbar = () => {
             </li>
           </ul>
         </motion.div>
-        {open ? (
-          <motion.ul
-            layout
-            variants={unorderedList}
-            initial="hidden"
-            animate="show"
-            className="flex flex-col items-center space-y-sm my-sm"
-          >
-            <motion.li variants={listItem}>
-              <LINK href="#portfolio">
-                <a
-                  onClick={() => {
-                    setOpen(false);
-                  }}
-                >
-                  Work
-                </a>
-              </LINK>
-            </motion.li>
-            <motion.li variants={listItem}>
-              <LINK href="#about">
-                <a onClick={() => setOpen(false)}>About</a>
-              </LINK>
-            </motion.li>
-            <motion.li>
+        <motion.ul
+          layout
+          variants={unorderedList}
+          initial={"hidden"}
+          animate={open ? "show" : "hidden"}
+          className="flex flex-col items-center space-y-sm my-sm"
+        >
+          <motion.li variants={listItem}>
+            <LINK href="#portfolio">
               <a
-                href="https://github.com/mijail-piekarz"
-                target="_blank"
-                className="cursor-pointer"
-                onClick={() => {}}
+                onClick={() => {
+                  setOpen(false);
+                }}
               >
-                <AiFillGithub size="2.25rem" />
+                Work
               </a>
-            </motion.li>
-            <motion.li variants={listItem}>
-              <LINK href="#contact">
-                <a
-                  onClick={() => setOpen(false)}
-                  className="border-2 border-secondary px-2 rounded text-secondary hover:bg-secondary-light hover:bg-opacity-5 duration-300"
-                >
-                  Contact
-                </a>
-              </LINK>
-            </motion.li>
-          </motion.ul>
-        ) : null}
+            </LINK>
+          </motion.li>
+          <motion.li variants={listItem}>
+            <LINK href="#about">
+              <a onClick={() => setOpen(false)}>About</a>
+            </LINK>
+          </motion.li>
+          <motion.li variants={listItem}>
+            <a
+              href="https://github.com/JeremyTheWizard"
+              target="_blank"
+              className="cursor-pointer"
+              onClick={() => {}}
+            >
+              <AiFillGithub size="2.25rem" />
+            </a>
+          </motion.li>
+          <motion.li variants={listItem}>
+            <LINK href="#contact">
+              <a
+                onClick={() => setOpen(false)}
+                className="border-2 border-secondary px-2 rounded text-secondary hover:bg-secondary-light hover:bg-opacity-5 duration-300"
+              >
+                Contact
+              </a>
+            </LINK>
+          </motion.li>
+        </motion.ul>
       </motion.nav>
     );
   };
