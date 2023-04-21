@@ -110,7 +110,7 @@ const Home: NextPage = () => {
           </motion.p>
         </div>
         {showAll && (
-          <div className="space-y-xl">
+          <div className="space-y-40 sm:space-y-xl">
             <Portfolio
               projectEnter={projectEnter}
               projectLeave={projectLeave}
